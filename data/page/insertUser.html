@@ -1,0 +1,31 @@
+<div class="bianJiDiv">
+<h1>我是新增页面</h1>
+<div class="form-group">
+<label for="rname">姓名：</label>
+<input type="text" ng-model="rname" class="form-control" id="rname"><br>
+<label for="rnumber">号码：</label>
+<input type="text" ng-model="rnumber" class="form-control" id="rnumber"><br>
+<label for="radd">位置：</label>
+<select ng-model="radd" id="radd" class="form-control">
+	<option value='SG'>得分后卫(SG)</option>
+	<option value='PF'>大前锋(PF)</option>
+	<option value='SF'>小前锋(SF)</option>
+	<option value='PG'>控球后卫(PG)</option>
+	<option value='C'>中锋(C)</option>
+</select><br>
+<label for="rqiudui">球队：</label>
+<select ng-model="rqiudui" id="rqiudui" class="form-control">
+	<option value="雷霆">雷霆</option>
+	<option value="勇士">勇士</option>		
+	<option value="骑士">骑士</option>		
+	<option value="尼克斯">尼克斯</option>		
+	<option value="火箭">火箭</option>		
+	<option value="热火">热火</option>
+</select><br>
+头像：<input type="file" value="选择头像" ng-model="img"><br>
+<div class="text-center">
+<button ng-click='new()' class="btn btn-primary">保存</button>		
+<button ng-click='back()' class="btn btn-default">返回</button>
+</div>
+</div>
+</div>	

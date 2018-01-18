@@ -1,0 +1,12 @@
+<div class="text-center bianJiDiv">
+<h1>我是详情页面</h1>
+<ul id="list">
+	<li><img ng-src="{{One.img}}"></li>
+	<li>姓名：{{One.name}}</li>
+	<li>位置：{{One.add|userFilter}}</li>
+	<li>号码：{{One.number}}</li>
+	<li>球队：{{One.qiudui}}</li>
+	<li>票数：{{One.piaoshu}}</li>
+	<li><button ng-click="add(one.id)" ng-disabled="bool" class="btn btn-primary">投票</button><button ng-click="return()" class="btn btn-default">返回</button></li>
+</ul>
+</div>

@@ -1,0 +1,33 @@
+<h3>我是球员页面</h3>
+<form class="form-inline">
+<div class="form-group">
+<label for="search">查询：</label>
+<input type="text" ng-model="search" class="form-control" id="search"/>
+<label for="select">排序：</label>
+<select ng-model="select" class="form-control" id="select">
+	<option value="name">名字</option>
+	<option value="piaoshu">票数</option>
+</select>
+</div><br>
+<button ng-click="addUser()" class="btn btn-primary">新增球员信息</button><br/>
+<table class="table table-bordered text-center">
+<tr class="info">
+	<td>照片</td>
+	<td>姓名</td>
+	<td>位置</td>
+	<td>号码</td>
+	<td>球队</td>
+	<td>票数</td>
+	<td>操作</td>
+</tr>
+	<tr ng-repeat="v in userobj|filter:search|orderBy:select" id="tr">
+		<td><img ng-src="{{v.img}}" class="img"></td>
+		<td><a href="#userCont" ng-click="cont(v.id)">{{v.name}}</a></td>
+		<td>{{v.add |userFilter}}</td>
+		<td>{{v.number}}</td>
+		<td>{{v.qiudui}}</td>
+		<td>{{v.piaoshu}}</td>
+		<td><button ng-click="update(v.id)" class="btn btn-primary">编辑</button> <button ng-click="dele(v.id)" class="btn btn-primary">删除</button></td>
+	</tr>
+</table>
+</form>
